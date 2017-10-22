@@ -14,10 +14,21 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true">
-            <android.support.v7.widget.Toolbar
+            <company.entertainment.filip.cookbook.widgets.CookBookToolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="@dimen/app_toolbar_height"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:background="@color/colorPrimary"/>
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recipes_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/app_toolbar_height"/>
 </android.support.design.widget.CoordinatorLayout>
