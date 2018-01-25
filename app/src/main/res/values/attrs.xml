@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatingBarView">
+        <attr name="maxRating" format="integer" />
+        <attr name="ratingDrawableOn" format="reference" />
+        <attr name="ratingDrawableOff" format="reference" />
+    </declare-styleable>
+</resources>

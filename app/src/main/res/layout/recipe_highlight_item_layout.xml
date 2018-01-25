@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="122dp">
+    android:layout_height="wrap_content">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@color/colorPrimary"/>
+        android:src="@drawable/duck"
+        android:scaleType="centerCrop"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,7 +19,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="122dp"
+        android:layout_height="wrap_content"
         android:padding="16dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,11 +29,11 @@
                 android:id="@+id/recipe_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"/>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"/>
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:lines="2"
+                android:layout_weight="1"
+                tools:text="This is super long title of the really delicious food"/>
             <ImageView
                 android:id="@+id/vegetarian_icon"
                 android:layout_width="20dp"
@@ -43,9 +46,86 @@
                 android:layout_marginLeft="6dp"
                 android:src="@drawable/icon_wheat"/>
         </LinearLayout>
-        <company.entertainment.filip.cookbook.widgets.DifficultyBarView
-            android:id="@+id/difficulty_bar_view"
-            android:layout_width="match_parent"
-            android:layout_height="12dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Time:"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:text="30 min"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Difficulty:"
+                android:layout_marginEnd="5dp"/>
+            <company.entertainment.filip.cookbook.widgets.RatingBarView
+                android:id="@+id/difficulty_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:ratingDrawableOff="@drawable/icon_chef_hat_off"
+                app:ratingDrawableOn="@drawable/icon_chef_hat_on"
+                app:maxRating="5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Rating:"
+                android:layout_marginEnd="5dp"/>
+            <company.entertainment.filip.cookbook.widgets.RatingBarView
+                android:id="@+id/rating_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:ratingDrawableOff="@drawable/rating_star_off"
+                app:ratingDrawableOn="@drawable/rating_star_on"
+                app:maxRating="5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:text="Servers:"
+                android:layout_marginEnd="5dp"/>
+            <TextView
+                android:id="@+id/serves_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:text="4 people"/>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

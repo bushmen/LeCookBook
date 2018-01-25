@@ -28,7 +28,7 @@ public class MainPageRecipeAdapter extends RecyclerView.Adapter<RecipeHighlightV
     public void onBindViewHolder(RecipeHighlightViewHolder holder, int position) {
         RecipeHighlightViewModel model = data.get(position);
         holder.titleTextView.setText(model.title);
-        holder.difficultyBarView.setDifficulty(model.difficulty);
+        holder.difficultyBarView.setRating(model.difficulty);
     }
 
     @Override

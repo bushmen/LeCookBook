@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import company.entertainment.filip.cookbook.R;
-import company.entertainment.filip.cookbook.widgets.DifficultyBarView;
+import company.entertainment.filip.cookbook.widgets.RatingBarView;
 
 public class RecipeHighlightViewHolder extends RecyclerView.ViewHolder {
-    public DifficultyBarView difficultyBarView;
+    public RatingBarView difficultyBarView;
     public TextView titleTextView;
 
     public RecipeHighlightViewHolder(View itemView) {

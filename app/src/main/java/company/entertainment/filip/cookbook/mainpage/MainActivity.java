@@ -8,6 +8,7 @@ import java.util.List;
 
 import company.entertainment.filip.cookbook.BaseActivity;
 import company.entertainment.filip.cookbook.R;
+import company.entertainment.filip.cookbook.RecipeItemDecoration;
 import company.entertainment.filip.cookbook.adapters.MainPageRecipeAdapter;
 import company.entertainment.filip.cookbook.mainpage.viewmodels.RecipeHighlightViewModel;
 
@@ -31,5 +32,6 @@ public class MainActivity extends BaseActivity implements MainView {
     public void viewLoaded(List<RecipeHighlightViewModel> recipes) {
         recipesRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recipesRecyclerView.setAdapter(new MainPageRecipeAdapter(recipes));
+        recipesRecyclerView.addItemDecoration(new RecipeItemDecoration(this, R.drawable.recipe_divider));
     }
 }
